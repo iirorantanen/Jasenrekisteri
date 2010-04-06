@@ -13,6 +13,7 @@ class Member(models.Model):
   application_date = models.DateField('Hakemus jätetty')
   accepted_date = models.DateField('Hakemus hyväksytty', null=True, blank=True)
   TYY_member = models.BooleanField('TYYn jäsen')
+  not_visible = models.BooleanField('En halua nimeni näkyvän julkisessa listauksessa')
 
   def __unicode__(self):
     return self.lname + ' ' +self.fname
