@@ -7,6 +7,7 @@ admin.autodiscover()
 urlpatterns = patterns('',
     (r'^$', 'jasenrekisteri.rekisteri.views.index'),
     (r'^(?P<member_id>\d+)/$', 'jasenrekisteri.rekisteri.views.detail'),
+    (r'^/edit/(?P<member_id>\d+)/$', 'jasenrekisteri.rekisteri.views.edit_member'),
     # Example:
     # (r'^jasenrekisteri/', include('jasenrekisteri.foo.urls')),
 
