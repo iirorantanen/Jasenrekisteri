@@ -11,6 +11,7 @@ class Member(models.Model):
   town = models.CharField('Postitoimipaikka',max_length=30, blank=True)
   phone = models.CharField('Puhelin', max_length=20, blank=True)
   kotipaikka = models.CharField(max_length=30)
+  why = models.TextField('Perusteet jäsenyydelle', max_length=8000)
   application_date = models.DateField('Hakemus jätetty', default=date.today())
   accepted_date = models.DateField('Hakemus hyväksytty', null=True, blank=True)
   TYY_member = models.BooleanField('TYYn jäsen')
